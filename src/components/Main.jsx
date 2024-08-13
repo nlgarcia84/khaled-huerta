@@ -14,8 +14,8 @@ const MainBox = styled.div`
 
 const ImgMain = styled.img`
   width: 100%;
-  filter: sepia(50%);
-  opacity: 70%;
+  filter: sepia(40%);
+  opacity: 60%;
 `;
 
 const Main = () => {

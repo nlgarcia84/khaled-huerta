@@ -4,7 +4,6 @@ import FloatMenu from './FloatMenu';
 import Hamburger from 'hamburger-react';
 
 const HeaderBox = styled.div`
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;

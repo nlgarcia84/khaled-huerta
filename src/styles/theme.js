@@ -1,7 +1,7 @@
 const theme = {
   colors: {
     headerTextColor: '#ffffff',
-    mainColor: '#a28457',
+    mainColor: '#b29163',
     textColor: '#432717',
     burgerTextColor: '#ffffff',
   },
