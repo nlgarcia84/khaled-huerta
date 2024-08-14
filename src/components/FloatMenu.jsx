@@ -3,11 +3,10 @@ import burgerItems from '../assets/burgerItems';
 import styled from 'styled-components';
 
 const Menu = styled.div`
-  position: absolute;
-
-  width: 100%;
-  height: auto;
+  position: fixed;
+  top: 3em;
   z-index: 1;
+  width: 100%;
   background-color: ${(props) => props.theme.colors.mainColor};
   color: ${(props) => props.theme.colors.burgerTextColor};
   opacity: 0.8;

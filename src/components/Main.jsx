@@ -7,6 +7,8 @@ import hadiths from '../assets/hadiths';
 import styled from 'styled-components';
 
 const MainBox = styled.div`
+  position: relative;
+  top: 1.5em;
   text-align: center;
   color: ${(props) => props.theme.colors.mainColor};
   font-size: ${(props) => props.theme.fontSizes.medium};
