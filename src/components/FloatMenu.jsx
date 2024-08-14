@@ -1,6 +1,5 @@
-import React from 'react';
-import burgerItems from '../assets/burgerItems';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Menu = styled.div`
   position: fixed;
@@ -21,9 +20,15 @@ const FloatMenu = () => {
   return (
     <Menu>
       <List>
-        {burgerItems.map((item) => (
-          <li key={item.id}>{item.description}</li>
-        ))}
+        <li>
+          <Link style={{ color: 'white', textDecoration: 'none' }} to="/about">
+            Mi historia
+          </Link>
+        </li>
+
+        <li>Estudios</li>
+        <li>Mi Blog</li>
+        <li>Contacto</li>
       </List>
     </Menu>
   );

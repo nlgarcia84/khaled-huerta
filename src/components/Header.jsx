@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import FloatMenu from './FloatMenu';
 import Hamburger from 'hamburger-react';
+import { Link } from 'react-router-dom';
 
 const HeaderBox = styled.div`
   position: fixed;
+  top: 0;
   width: 100%;
   z-index: 1;
   display: flex;
@@ -35,7 +37,9 @@ const Header = () => {
     <>
       <HeaderBox>
         <Logo>
-          <p>Khaled Huerta</p>
+          <Link style={{ color: 'white', textDecoration: 'none' }} to="/">
+            <p>Khaled Huerta</p>
+          </Link>
         </Logo>
         <Menu>
           <Hamburger toggled={isOpen} toggle={toggleFloat} />
