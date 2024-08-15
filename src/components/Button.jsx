@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const FaqBox = styled.div`
-  background-color: ${(props) => props.theme.colors.mainColor};
-  color: white;
+  color: ${(props) => props.theme.colors.mainColor};
+  background-color: white;
   width: 70%;
   margin-left: auto;
   margin-right: auto;
