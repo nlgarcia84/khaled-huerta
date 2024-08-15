@@ -20,7 +20,7 @@ export const Button = () => {
           textDecoration: 'none',
           top: '15em',
         }}
-        to="/learnIslam"
+        to="/faqs"
       >
         <FaqBox>¿Por qué Islam?</FaqBox>
       </Link>
