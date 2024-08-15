@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Menu = styled.div`
   position: fixed;
   top: 3em;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
   background-color: ${(props) => props.theme.colors.mainColor};
   color: ${(props) => props.theme.colors.burgerTextColor};
