@@ -1,7 +1,26 @@
 import styled from 'styled-components';
+import khaledImgProfile from '../assets/images/khaledImgProfile.jpg';
+import khaledImgFlat from '../assets/images/khaledImgFlat.jpeg';
 
 const Biography = styled.div`
   margin: 5em 2em;
+`;
+
+const TitleCard = styled.h2`
+  position: relative;
+  top: 2em;
+  z-index: 1;
+  color: white;
+  background-color: ${(props) => props.theme.colors.mainColor};
+  width: 40%;
+  padding: 0.5em 1em;
+  text-align: center;
+`;
+
+const ImageCard = styled.img`
+  width: 100%;
+  filter: sepia(40%);
+  opacity: 60%;
 `;
 
 export const About = () => {
@@ -9,7 +28,8 @@ export const About = () => {
     <>
       <Biography>
         <h1>¿Quién soy?</h1>
-        <h2>Islam</h2>{' '}
+        <TitleCard>Islam</TitleCard>
+        <ImageCard src={khaledImgProfile} />
         <p>
           Mi nombre es Cesar Obed Naín Espinosa Huerta, soy mexicano tengo
           treinta y dos años, conocí el islam a los dieciocho y me tomó seis
@@ -24,7 +44,8 @@ export const About = () => {
           especialice en la facultad de las ciencias del hadith, una
           licenciatura que duró cuatro años.
         </p>
-        <h2>Deporte</h2>
+        <TitleCard>Deporte</TitleCard>
+        <ImageCard src={khaledImgFlat} />
         <p>
           Practico el bmx flatland o ciclismo acrobático hace catorce años,
           conocí este deporte mediante un vecino amigo de mi hermana que me
