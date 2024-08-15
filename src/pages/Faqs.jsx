@@ -11,19 +11,25 @@ const FaqContainer = styled.div`
 
 const FaqMenu = styled.ul`
   list-style: none;
-  background-color: ${(props) => props.theme.colors.menuFaqColor};
   padding: 1em;
   margin: 0.5em;
+  border: 2px solid ${(props) => props.theme.colors.mainColor};
 `;
 
 const ItemFaqMenu = styled.li`
   padding: 1em;
 `;
 
-export const Faqs = () => {
-  const [description, setDescription] = useState([]);
+const ItemDescription = styled.div`
+  background-color: ${(props) => props.theme.colors.itemMenuFaqColor};
+`;
 
-  const toggleDescription = (id) => {};
+export const Faqs = () => {
+  const [description, setDescription] = useState(false);
+
+  const toggleDescription = () => {
+    setDescription(!description);
+  };
 
   return (
     <>
@@ -31,7 +37,10 @@ export const Faqs = () => {
         <h2>Preguntas frecuentes</h2>
         <FaqMenu>
           {faqs.map((faq) => (
-            <ItemFaqMenu key={faq.id}>{faq.title}</ItemFaqMenu>
+            <ItemFaqMenu onClick={toggleDescription} key={faq.id}>
+              {faq.title}
+              {description && faq.description}
+            </ItemFaqMenu>
           ))}
         </FaqMenu>
       </FaqContainer>
