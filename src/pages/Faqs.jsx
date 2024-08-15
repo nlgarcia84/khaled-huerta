@@ -17,6 +17,9 @@ const FaqMenu = styled.ul`
 `;
 
 const ItemFaqMenu = styled.li`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
   text-align: center;
   background-color: ${(props) => props.theme.colors.mainColor};
