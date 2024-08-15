@@ -16,16 +16,19 @@ const List = styled.ul`
   font-size: ${(props) => props.theme.fontSizes.medium};
 `;
 
-const FloatMenu = () => {
+const FloatMenu = ({ toggle }) => {
   return (
     <Menu>
       <List>
         <li>
-          <Link style={{ color: 'white', textDecoration: 'none' }} to="/about">
+          <Link
+            style={{ color: 'white', textDecoration: 'none' }}
+            onClick={toggle}
+            to="/about"
+          >
             Mi historia
           </Link>
         </li>
-
         <li>Estudios</li>
         <li>Mi Blog</li>
         <li>Contacto</li>
