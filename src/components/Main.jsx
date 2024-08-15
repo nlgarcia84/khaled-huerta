@@ -8,6 +8,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const MainBox = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -17,7 +18,6 @@ const MainBox = styled.div`
 `;
 
 const ImgMain = styled.img`
-  position: relative;
   width: 100%;
   filter: sepia(40%);
   opacity: 60%;

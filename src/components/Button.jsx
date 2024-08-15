@@ -15,9 +15,9 @@ export const Button = () => {
     <>
       <Link
         style={{
-          textDecoration: 'none',
           position: 'relative',
           zIndex: '1',
+          textDecoration: 'none',
           top: '15em',
         }}
         to="/learnIslam"
