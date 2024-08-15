@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const FaqBox = styled.div`
-  color: ${(props) => props.theme.colors.mainColor};
-  background-color: white;
+  color: white;
+  background-color: ${(props) => props.theme.colors.mainColor};
   width: 70%;
   margin-left: auto;
   margin-right: auto;
@@ -22,7 +22,7 @@ export const Button = () => {
         }}
         to="/learnIslam"
       >
-        <FaqBox>FAQ sobre Islam</FaqBox>
+        <FaqBox>¿Por qué Islam?</FaqBox>
       </Link>
     </>
   );
