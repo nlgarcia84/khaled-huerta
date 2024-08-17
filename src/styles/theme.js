@@ -5,6 +5,7 @@ const theme = {
     textColor: '#432717',
     burgerTextColor: '#ffffff',
     menuFaqColor: '#c9c5c5',
+    itemMenuFaqColor: '#d6d3d3',
   },
   fontSizes: {
     small: '1em',

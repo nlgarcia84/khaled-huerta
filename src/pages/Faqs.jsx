@@ -18,25 +18,21 @@ const FaqMenu = styled.ul`
 
 const ItemFaqMenu = styled.li`
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
+  flex-direction: column;
   text-align: center;
+  color: white;
   background-color: ${(props) => props.theme.colors.mainColor};
   padding: 1em;
   margin-bottom: 0.5em;
 `;
 
-const ItemDescription = styled.div`
-  background-color: ${(props) => props.theme.colors.itemMenuFaqColor};
-  margin-top: 1em;
-`;
+const ItemDescription = styled.div``;
 
 export const Faqs = () => {
-  const [description, setDescription] = useState(false);
+  const [description, setDescription] = useState(null);
 
-  const toggleDescription = () => {
-    setDescription(!description);
+  const toggleDescription = (id) => {
+    setDescription((prevState) => (prevState === id ? null : id));
   };
 
   return (
@@ -46,11 +42,14 @@ export const Faqs = () => {
         <FaqMenu>
           <div>
             {faqs.map((faq) => (
-              <ItemFaqMenu onClick={toggleDescription} key={faq.id}>
+              <ItemFaqMenu
+                onClick={() => toggleDescription(faq.id)}
+                key={faq.id}
+              >
                 {faq.title}
-                <ItemDescription>
-                  {description && faq.description}
-                </ItemDescription>
+                {description === faq.id && (
+                  <ItemDescription>{faq.description}</ItemDescription>
+                )}
               </ItemFaqMenu>
             ))}
           </div>
