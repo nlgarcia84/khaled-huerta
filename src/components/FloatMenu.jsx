@@ -22,8 +22,8 @@ const FloatMenu = ({ toggle }) => {
       <List>
         <li>
           <Link
+            onClick={() => toggle()}
             style={{ color: 'white', textDecoration: 'none' }}
-            onClick={toggle}
             to="/about"
           >
             Mi historia
