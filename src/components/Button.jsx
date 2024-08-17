@@ -10,10 +10,11 @@ const FaqBox = styled.div`
   margin-right: auto;
 `;
 
-export const Button = () => {
+export const Button = ({ toggle }) => {
   return (
     <>
       <Link
+        onClick={() => toggle()}
         style={{
           position: 'relative',
           zIndex: '1',

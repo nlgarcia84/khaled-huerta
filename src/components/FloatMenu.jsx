@@ -29,7 +29,16 @@ const FloatMenu = ({ toggle }) => {
             Mi historia
           </Link>
         </li>
-        <li>Estudios</li>
+        <li>
+          {' '}
+          <Link
+            onClick={() => toggle()}
+            style={{ color: 'white', textDecoration: 'none' }}
+            to="/myStudies"
+          >
+            Estudios
+          </Link>
+        </li>
         <li>Mi Blog</li>
         <li>Contacto</li>
       </List>
