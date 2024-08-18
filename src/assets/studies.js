@@ -13,7 +13,7 @@ const studies = [
   {
     id: 3,
     value: 'Graduado de la Facultad de las Ciencias del Hadith.',
-    location: 'Universidad Islámica de Medina',
+    location: 'Universidad Islámica de Medina.',
   },
 ];
 
