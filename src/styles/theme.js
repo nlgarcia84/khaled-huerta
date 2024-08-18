@@ -1,4 +1,7 @@
 const theme = {
+  pageSpaces: {
+    margin: '5em 2em',
+  },
   colors: {
     headerTextColor: '#ffffff',
     mainColor: '#b29163',

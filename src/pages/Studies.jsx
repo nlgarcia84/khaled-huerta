@@ -1,27 +1,44 @@
 import React from 'react';
+import studies from '../assets/studies';
 import styled from 'styled-components';
 
-const MyStudies = styled.div`
-  margin: 5em 2em;
+const StudiesContainer = styled.div`
+  margin: ${(props) => props.theme.pageSpaces.margin};
+`;
+
+const List = styled.ul`
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+`;
+
+const ItemList = styled.li`
+  background-color: ${(props) => props.theme.colors.mainColor};
+  color: white;
+  padding: 0.5em;
+  margin: 1em 0;
+`;
+
+const ItemTitle = styled.p`
+  background-color: white;
+  color: ${(props) => props.theme.colors.mainColor};
+  padding: 1em 0.5em;
 `;
 
 export const Studies = () => {
   return (
     <>
-      <MyStudies>
-        <h2>Breve biografía de estudios</h2>
-        <h3>
-          Graduado del bachillerato oficial número 73, Tecámac Estado de México.
-        </h3>
-        <h3>
-          Graduado del instituto de aprendizaje de la lengua árabe en Medina,
-          Arabia Saudita.
-        </h3>
-        <h3>
-          Graduado de la facultad de las ciencias del hadith en la universidad
-          islámica de Medina.
-        </h3>
-      </MyStudies>
+      <StudiesContainer>
+        <h1>Breve descripción de mis estudios</h1>
+        <List>
+          {studies.map((element) => (
+            <ItemList key={element.id}>
+              <ItemTitle>{element.value}</ItemTitle>
+              <p>{element.location}</p>
+            </ItemList>
+          ))}
+        </List>
+      </StudiesContainer>
     </>
   );
 };

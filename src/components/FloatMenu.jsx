@@ -40,7 +40,16 @@ const FloatMenu = ({ toggle }) => {
           </Link>
         </li>
         <li>Mi Blog</li>
-        <li>Contacto</li>
+        <li>
+          {' '}
+          <Link
+            onClick={() => toggle()}
+            style={{ color: 'white', textDecoration: 'none' }}
+            to="/contact"
+          >
+            Contacto
+          </Link>
+        </li>
       </List>
     </Menu>
   );
