@@ -43,6 +43,7 @@ const Button = styled.button`
   border: none;
   width: 100px;
   padding: 1em 2em;
+  margin: 2em;
 `;
 
 const Span = styled.span`
@@ -113,6 +114,20 @@ export const Contact = () => {
               <Span>Espacio requerido</Span>
             )}
           </ItemForm>
+          <input
+            style={{
+              marginBottom: '2em',
+            }}
+            type="checkbox"
+            {...register('lopd', {
+              required: {
+                value: true,
+                message: 'Debe de aceptar los términos y condiciones',
+              },
+            })}
+          />
+          Acepto la política de privacidad
+          {errors.lopd && <Span>{errors.lopd.message}</Span>}
           <DivButton>
             <Button type="submit">Enviar</Button>
           </DivButton>
