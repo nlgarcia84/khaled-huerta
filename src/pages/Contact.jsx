@@ -1,5 +1,6 @@
 import { useForm } from 'react-hook-form';
 import styled from 'styled-components';
+import emailjs from '@emailjs/browser';
 
 const FormContainer = styled.div`
   margin: ${(props) => props.theme.pageSpaces.margin};
@@ -57,14 +58,39 @@ export const Contact = () => {
     register,
     handleSubmit,
     formState: { errors },
+    setValue,
     reset,
-  } = useForm();
+  } = useForm({
+    defaultValues: {
+      nombre: 'Su nombre',
+      email: 'Su correo electrónico',
+      mensaje: 'Mensaje',
+    },
+  });
 
   console.log(errors);
 
   const onSubmit = handleSubmit((data) => {
     console.log(data);
-    reset();
+    const templateParams = {
+      from_nombre: data.nombre,
+      from_email: data.email,
+      from_mensaje: data.mensaje,
+    };
+
+    emailjs
+      .send('service_gf4467b', 'template_2fo2l2y', templateParams, {
+        publicKey: 'jDbcJwkjb1cOv6TaA',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          reset();
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        }
+      );
   });
 
   return (
@@ -75,6 +101,7 @@ export const Contact = () => {
           <ItemForm>
             <label>Nombre:</label>
             <input
+              onClick={() => setValue('nombre', '')}
               style={Input}
               type="text"
               {...register('nombre', {
@@ -89,6 +116,7 @@ export const Contact = () => {
           <ItemForm>
             <label>Correo electrónico:</label>
             <input
+              onClick={() => setValue('email', '')}
               style={Input}
               type="email"
               {...register('email', {
@@ -107,6 +135,7 @@ export const Contact = () => {
           <ItemForm>
             <label>Mensaje:</label>
             <textarea
+              onClick={() => setValue('mensaje', '')}
               style={TextArea}
               {...register('mensaje', {
                 required: true,
