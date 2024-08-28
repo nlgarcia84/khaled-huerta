@@ -57,12 +57,14 @@ export const Contact = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
 
   console.log(errors);
 
   const onSubmit = handleSubmit((data) => {
     console.log(data);
+    reset();
   });
 
   return (
