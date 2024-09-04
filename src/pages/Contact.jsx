@@ -27,13 +27,11 @@ const ItemForm = styled.li`
 const Input = {
   border: '1px solid #b29163',
   height: '2em',
-  margin: '1em 0',
 };
 
 const TextArea = {
   border: '1px solid #b29163',
   height: '7em',
-  margin: '1em 0',
 };
 
 const DivButton = styled.div`
