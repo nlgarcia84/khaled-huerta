@@ -20,6 +20,10 @@ const TitleCard = styled.h2`
   text-align: center;
 `;
 
+const BodyCard = styled.p`
+  color: ${(props) => props.theme.colors.textColor};
+`;
+
 const ImageCard = styled.img`
   position: relative;
   width: 100%;
@@ -36,7 +40,7 @@ export const About = () => {
           <TitleCard>Islam</TitleCard>
           <ImageCard src={khaledImgProfile} />
         </div>
-        <p>
+        <BodyCard>
           Mi nombre es Cesar Obed Naín Espinosa Huerta, soy mexicano tengo
           treinta y dos años, conocí el islam a los dieciocho y me tomó seis
           meses aceptar el mensaje del islam. Nací y crecí en el estado de
@@ -49,12 +53,12 @@ export const About = () => {
           previo del idioma así que me retrasé en terminarlo, luego me
           especialice en la facultad de las ciencias del hadith, una
           licenciatura que duró cuatro años.
-        </p>
+        </BodyCard>
         <div>
           <TitleCard>Deporte</TitleCard>
           <ImageCard src={khaledImgFlat} />
         </div>
-        <p>
+        <BodyCard>
           Practico el bmx flatland o ciclismo acrobático hace catorce años,
           conocí este deporte mediante un vecino amigo de mi hermana que me
           invitó a practicar con él en Tecámac, comencé con una bicicleta muy
@@ -73,7 +77,7 @@ export const About = () => {
           persistencia y perseverancia en el proceso de conseguir un truco o
           combo y lo relaciono con la vida, en parte de eso se trata, e debe
           persistir y ser paciente para conseguir el objetivo.
-        </p>
+        </BodyCard>
       </Biography>
     </>
   );

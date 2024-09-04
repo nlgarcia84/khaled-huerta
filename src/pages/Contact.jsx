@@ -8,6 +8,7 @@ const PageTitle = styled.h1`
 
 const FormContainer = styled.div`
   margin: ${(props) => props.theme.pageSpaces.margin};
+  color: ${(props) => props.theme.colors.textColor};
 `;
 
 const Form = styled.form``;

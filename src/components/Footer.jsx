@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const FooterBox = styled.div`
   position: absolute;
   width: 100%;
-  background-color: black;
+  background-color: ${(props) => props.theme.colors.textColor};
   color: white;
   text-align: center;
 `;
