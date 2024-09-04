@@ -11,8 +11,6 @@ const FormContainer = styled.div`
   color: ${(props) => props.theme.colors.textColor};
 `;
 
-const Form = styled.form``;
-
 const BodyForm = styled.ul`
   list-style: none;
   padding-left: 0;
@@ -90,7 +88,7 @@ export const Contact = () => {
   return (
     <FormContainer>
       <PageTitle>Contacto</PageTitle>
-      <Form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit}>
         <BodyForm>
           <ItemForm>
             <label>Nombre:</label>
@@ -160,7 +158,7 @@ export const Contact = () => {
             <Button type="submit">Enviar</Button>
           </DivButton>
         </BodyForm>
-      </Form>
+      </form>
     </FormContainer>
   );
 };

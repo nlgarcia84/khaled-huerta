@@ -10,6 +10,7 @@ const theme = {
     menuFaqColor: '#c9c5c5',
     itemMenuFaqColor: '#d6d3d3',
   },
+  fontFamily: 'Poppins',
   fontSizes: {
     small: '1em',
     medium: '2em',
@@ -18,6 +19,10 @@ const theme = {
   fontStyles: {
     normal: 'normal',
     italic: 'italic',
+  },
+  fontWeight: {
+    bold: 'bold',
+    normal: 'normal',
   },
 };
 

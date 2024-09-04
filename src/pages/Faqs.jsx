@@ -9,6 +9,10 @@ const FaqContainer = styled.div`
   margin: 5em 2em;
 `;
 
+const PageTitle = styled.h2`
+  color: ${(props) => props.theme.colors.textColor};
+`;
+
 const FaqMenu = styled.ul`
   list-style: none;
   padding: 1em;
@@ -21,38 +25,52 @@ const ItemFaqMenu = styled.li`
   flex-direction: column;
   text-align: center;
   color: white;
-  background-color: ${(props) => props.theme.colors.mainColor};
+
+  background-color: ${(props) =>
+    props.isSelected
+      ? props.theme.colors.textColor
+      : props.theme.colors.mainColor};
   padding: 1em;
   margin-bottom: 0.5em;
 `;
 
-const ItemDescription = styled.div``;
+const ItemTitle = styled.div`
+  font-weight: ${(props) =>
+    props.isSelected
+      ? props.theme.fontWeight.bold
+      : props.theme.fontWeight.normal};
+`;
+
+const ItemDescription = styled.div`
+  padding: 0.5em;
+`;
 
 export const Faqs = () => {
-  const [description, setDescription] = useState(null);
+  // muestra la descripcion del item cuando se clica encima
+  const [selectedItemId, setSelectedItemId] = useState(null);
 
   const toggleDescription = (id) => {
-    setDescription((prevState) => (prevState === id ? null : id));
+    setSelectedItemId((prevState) => (prevState === id ? null : id));
   };
 
   return (
     <>
       <FaqContainer>
-        <h2>Preguntas frecuentes</h2>
+        <PageTitle>Preguntas frecuentes</PageTitle>
         <FaqMenu>
-          <div>
-            {faqs.map((faq) => (
-              <ItemFaqMenu
-                onClick={() => toggleDescription(faq.id)}
-                key={faq.id}
-              >
-                {faq.title}
-                {description === faq.id && (
-                  <ItemDescription>{faq.description}</ItemDescription>
-                )}
-              </ItemFaqMenu>
-            ))}
-          </div>
+          {faqs.map((faq) => (
+            <ItemFaqMenu
+              onClick={() => toggleDescription(faq.id)}
+              key={faq.id}
+              isSelected={selectedItemId === faq.id}
+            >
+              <ItemTitle>{faq.title}</ItemTitle>
+
+              {selectedItemId === faq.id && (
+                <ItemDescription>{faq.description}</ItemDescription>
+              )}
+            </ItemFaqMenu>
+          ))}
         </FaqMenu>
       </FaqContainer>
     </>
