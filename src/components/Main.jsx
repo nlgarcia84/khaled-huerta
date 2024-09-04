@@ -2,7 +2,7 @@ import { Button } from './Button';
 import HadithCard from './HadithCard';
 import hadiths from '../assets/hadiths';
 import khaledBookImage from '../assets/images/khaledImgBook.webp';
-import khaledMainImage from '../assets/images/khaledImgKhutba.webp';
+import khaledMainImage from '../assets/images/khaledImgKhutbaRead.webp';
 import khaledMasjidImage from '../assets/images/khaledImgMasjid.webp';
 import React from 'react';
 import styled from 'styled-components';
@@ -19,7 +19,7 @@ const MainBox = styled.div`
 
 const ImgMain = styled.img`
   width: 100%;
-  filter: sepia(40%);
+  filter: sepia(10%);
   opacity: 60%;
 `;
 

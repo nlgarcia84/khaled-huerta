@@ -42,7 +42,7 @@ const Header = () => {
           </Link>
         </Logo>
         <Menu>
-          <Hamburger toggled={isOpen} toggle={toggleFloat} />
+          <Hamburger size={25} toggled={isOpen} toggle={toggleFloat} />
         </Menu>
       </HeaderBox>
       {isOpen && <FloatMenu />}
