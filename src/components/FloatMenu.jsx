@@ -8,7 +8,6 @@ const Menu = styled.div`
   width: 100%;
   background-color: ${(props) => props.theme.colors.mainColor};
   color: ${(props) => props.theme.colors.burgerTextColor};
-  opacity: 0.9;
 `;
 
 const List = styled.ul`

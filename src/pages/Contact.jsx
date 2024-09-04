@@ -2,14 +2,15 @@ import { useForm } from 'react-hook-form';
 import styled from 'styled-components';
 import emailjs from '@emailjs/browser';
 
+const PageTitle = styled.h1`
+  color: ${(props) => props.theme.colors.textColor};
+`;
+
 const FormContainer = styled.div`
   margin: ${(props) => props.theme.pageSpaces.margin};
 `;
 
-const Form = styled.form`
-  margin: 0.5em 0;
-  padding: 0.5em 0;
-`;
+const Form = styled.form``;
 
 const BodyForm = styled.ul`
   list-style: none;
@@ -60,13 +61,7 @@ export const Contact = () => {
     formState: { errors },
     setValue,
     reset,
-  } = useForm({
-    defaultValues: {
-      nombre: 'Su nombre',
-      email: 'Su correo electrónico',
-      mensaje: 'Mensaje',
-    },
-  });
+  } = useForm();
 
   console.log(errors);
 
@@ -95,12 +90,13 @@ export const Contact = () => {
 
   return (
     <FormContainer>
-      <h1>Contacto</h1>
+      <PageTitle>Contacto</PageTitle>
       <Form onSubmit={onSubmit}>
         <BodyForm>
           <ItemForm>
             <label>Nombre:</label>
             <input
+              placeholder="Su nombre"
               onClick={() => setValue('nombre', '')}
               style={Input}
               type="text"
@@ -116,6 +112,7 @@ export const Contact = () => {
           <ItemForm>
             <label>Correo electrónico:</label>
             <input
+              placeholder="Su e-mail"
               onClick={() => setValue('email', '')}
               style={Input}
               type="email"
@@ -135,6 +132,7 @@ export const Contact = () => {
           <ItemForm>
             <label>Mensaje:</label>
             <textarea
+              placeholder="Su mensaje"
               onClick={() => setValue('mensaje', '')}
               style={TextArea}
               {...register('mensaje', {

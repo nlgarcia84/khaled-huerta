@@ -5,7 +5,7 @@ const theme = {
   colors: {
     headerTextColor: '#ffffff',
     mainColor: '#b29163',
-    textColor: '#432717',
+    textColor: '#675851',
     burgerTextColor: '#ffffff',
     menuFaqColor: '#c9c5c5',
     itemMenuFaqColor: '#d6d3d3',

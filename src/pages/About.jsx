@@ -1,9 +1,13 @@
 import styled from 'styled-components';
-import khaledImgProfile from '../assets/images/khaledImgProfile.jpg';
-import khaledImgFlat from '../assets/images/khaledImgFlat.jpeg';
+import khaledImgProfile from '../assets/images/khaledImgProfile.webp';
+import khaledImgFlat from '../assets/images/khaledImgFlat.webp';
 
 const Biography = styled.div`
   margin: 5em 2em;
+`;
+
+const PageTitle = styled.h1`
+  color: ${(props) => props.theme.colors.textColor};
 `;
 
 const TitleCard = styled.h2`
@@ -27,7 +31,7 @@ export const About = () => {
   return (
     <>
       <Biography>
-        <h1>¿Quién soy?</h1>
+        <PageTitle>¿Quién soy?</PageTitle>
         <div>
           <TitleCard>Islam</TitleCard>
           <ImageCard src={khaledImgProfile} />

@@ -2,6 +2,10 @@ import React from 'react';
 import studies from '../assets/studies';
 import styled from 'styled-components';
 
+const PageTitle = styled.h1`
+  color: ${(props) => props.theme.colors.textColor};
+`;
+
 const StudiesContainer = styled.div`
   margin: ${(props) => props.theme.pageSpaces.margin};
 `;
@@ -29,7 +33,7 @@ export const Studies = () => {
   return (
     <>
       <StudiesContainer>
-        <h1>Breve descripción de mis estudios</h1>
+        <PageTitle>Breve descripción de mis estudios</PageTitle>
         <List>
           {studies.map((element) => (
             <ItemList key={element.id}>
