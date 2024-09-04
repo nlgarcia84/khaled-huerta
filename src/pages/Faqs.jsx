@@ -38,7 +38,7 @@ const ItemTitle = styled.div`
   font-weight: ${(props) =>
     props.isSelected
       ? props.theme.fontWeight.bold
-      : props.theme.fontWeight.normal};
+      : props.theme.fontWeight.regular};
 `;
 
 const ItemDescription = styled.div`
@@ -64,7 +64,9 @@ export const Faqs = () => {
               key={faq.id}
               isSelected={selectedItemId === faq.id}
             >
-              <ItemTitle>{faq.title}</ItemTitle>
+              <ItemTitle isSelected={selectedItemId === faq.id}>
+                {faq.title}
+              </ItemTitle>
 
               {selectedItemId === faq.id && (
                 <ItemDescription>{faq.description}</ItemDescription>
