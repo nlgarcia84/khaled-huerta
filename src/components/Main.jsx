@@ -2,7 +2,7 @@ import { Button } from './Button';
 import HadithCard from './HadithCard';
 import hadiths from '../assets/hadiths';
 import khaledBookImage from '../assets/images/khaledImgBook.webp';
-import khaledMainImage from '../assets/images/khaledImgKhutba.webp';
+import khaledMainImage from '../assets/images/khaledImgKhutba-test.webp';
 import khaledMasjidImage from '../assets/images/khaledImgMasjid.webp';
 import React from 'react';
 import styled from 'styled-components';
