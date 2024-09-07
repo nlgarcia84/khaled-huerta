@@ -4,6 +4,7 @@ import FloatMenu from './FloatMenu';
 import Hamburger from 'hamburger-react';
 import { Link } from 'react-router-dom';
 import { device } from '../styles/device';
+import { Navbar } from './Navbar';
 
 const HeaderBox = styled.div`
   position: fixed;
@@ -31,6 +32,9 @@ const Logo = styled.div`
 
 const Menu = styled.div`
   padding: 0 1em;
+  @media ${device.laptop} {
+    display: none;
+  }
 `;
 
 const Header = () => {
@@ -48,6 +52,7 @@ const Header = () => {
             <p>Khaled Huerta</p>
           </Link>
         </Logo>
+        <Navbar />
         <Menu>
           <Hamburger size={25} toggled={isOpen} toggle={toggleFloat} />
         </Menu>
