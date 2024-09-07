@@ -6,6 +6,7 @@ const FooterBox = styled.div`
   background-color: ${(props) => props.theme.colors.textColor};
   color: white;
   text-align: center;
+  margin-top: auto;
 `;
 
 export const Footer = () => {

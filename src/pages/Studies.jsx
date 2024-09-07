@@ -7,7 +7,7 @@ const PageTitle = styled.h1`
 `;
 
 const StudiesContainer = styled.div`
-  margin: ${(props) => props.theme.pageSpaces.margin};
+  margin: 5em;
 `;
 
 const List = styled.ul`
