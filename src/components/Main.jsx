@@ -21,14 +21,15 @@ const ImgMain = styled.img`
   width: 100%;
   filter: sepia(10%);
   opacity: 60%;
+  margin-top: 1em;
 `;
 
 const Main = () => {
   return (
     <>
       <MainBox>
-        <Button />
         <ImgMain src={khaledMainImage} />
+        <Button />
         <HadithCard>{hadiths[0].value}</HadithCard>
         <ImgMain src={khaledMasjidImage} />
         <HadithCard>{hadiths[1].value}</HadithCard>
