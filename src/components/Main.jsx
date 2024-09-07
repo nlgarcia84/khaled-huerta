@@ -9,9 +9,7 @@ import styled from 'styled-components';
 
 const MainBox = styled.div`
   position: relative;
-  display: flex;
-  flex-direction: column;
-  position: relative;
+  top: 1em;
   text-align: center;
   color: ${(props) => props.theme.colors.mainColor};
   font-size: ${(props) => props.theme.fontSizes.medium};
@@ -21,19 +19,28 @@ const ImgMain = styled.img`
   width: 100%;
   filter: sepia(10%);
   opacity: 60%;
-  margin-top: 1em;
+`;
+
+const WrapImg = styled.div`
+  width: 100%;
 `;
 
 const Main = () => {
   return (
     <>
       <MainBox>
-        <ImgMain src={khaledMainImage} />
+        <WrapImg>
+          <ImgMain src={khaledMainImage} />
+        </WrapImg>
         <Button />
         <HadithCard>{hadiths[0].value}</HadithCard>
-        <ImgMain src={khaledMasjidImage} />
+        <WrapImg>
+          <ImgMain src={khaledMasjidImage} />
+        </WrapImg>
         <HadithCard>{hadiths[1].value}</HadithCard>
-        <ImgMain src={khaledBookImage} />
+        <WrapImg>
+          <ImgMain src={khaledBookImage} />
+        </WrapImg>
       </MainBox>
     </>
   );
