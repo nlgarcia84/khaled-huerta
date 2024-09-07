@@ -38,7 +38,6 @@ const FloatMenu = ({ toggle }) => {
             Estudios
           </Link>
         </li>
-        <li>Mi Blog</li>
         <li>
           {' '}
           <Link
