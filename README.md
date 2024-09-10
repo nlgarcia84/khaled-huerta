@@ -1,4 +1,4 @@
-# Web de Khaled Huerta
+# Web de Khaled Huerta hecha en React con Vite
 
 ## Estudiante de Ciencias del Hadiz
 
